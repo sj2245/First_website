@@ -9,9 +9,18 @@
   padding: 15px;
   border-radius: 1000px;
 }
+.theOGButton:active{
+  color:red;
+  background: green;
+  /* width: 85%; */
+  padding: 10px;
+  /* margin-left:30%; */
+  /* margin-right:30%; */
+}
 body {
   height: 100vh;
   width: 100vw;
   background: #000;
   color: white;
+
 }
