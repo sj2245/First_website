@@ -19,7 +19,7 @@ let curMod = 0;
 // Get docs
 let OGbutt = getdoc(`#theOGButton`);
 let pntDisplay = getdoc(`#pointDisplay`);
-let upgCursor = getdoc(`#UpgCursor`)
+let upgCursor = getdoc(`#UpgCursor`);
 let pntGainDisplay = getdoc(`#pointClickDisplay`);
 // others
 let count = 0;
