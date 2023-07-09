@@ -17,6 +17,7 @@ function perSecPoints(Modifier) {
 // for FUTURE WORK
 let curMod = 0;
 // Get docs
+let pntNumbero2 = getdoc(`.points`);
 let OGbutt = getdoc(`#theOGButton`);
 let pntDisplay = getdoc(`#pointDisplay`);
 let upgCursor = getdoc(`#UpgCursor`);
@@ -28,22 +29,29 @@ let buttString = `Current points:0`;
 let upgCost = 10;
 let idlepoints = 1;
 let pointGain = 1;
-
-OGbutt.addEventListener(`click`, function (e) {
-  count = count + pointGain;
-  // OGbutt.classList.toggle(`circleButton`);
+if(OGbutt){
+  OGbutt.addEventListener(`click`, function (e) {
+    count = parseInt(pntNumbero2.innerHTML);
+    count = count + pointGain;
   
-  // if (buttswap != `programmer`) {
-  //   buttswap = `programmer`;
-  // } 
-  // else {
-  //   buttswap = `gamer`;
-  // }
+    // OGbutt.classList.toggle(`circleButton`);
+    
+    // if (buttswap != `programmer`) {
+    //   buttswap = `programmer`;
+    // } 
+    // else {
+    //   buttswap = `gamer`;
+    // }
+    
+    // buttString = `Current Points: ${count}`;
+    // pntDisplay.innerHTML = buttString;
   
-  buttString = `Current Points: ${count}`;
-  pntDisplay.innerHTML = buttString;
-})
-upgCursor.addEventListener(`click`, function (e) {
+  pntNumbero2.innerHTML = count;
+  })
+}
+if(upgCursor){
+  upgCursor.addEventListener(`click`, function (e) {
+    count = parseInt(pntNumbero2.innerHTML);
   if(count >= upgCost){
     
     count -= upgCost;
@@ -52,8 +60,9 @@ upgCursor.addEventListener(`click`, function (e) {
     
     pntGainDisplay.innerHTML = `Points gained per click: ${pointGain}`;
     upgCursor.innerHTML = `Upgrade Cursor! Cost: ${upgCost} points`;
-    buttString = `Current Points: ${count}`;
-    pntDisplay.innerHTML = buttString;
+    pntNumbero2.innerHTML = count;
+    // buttString = `Current Points: ${count}`;
+    // pntDisplay.innerHTML = buttString;
   }
   else{
     //upgCursor.classList.toggle(`basicButtonFail`);
@@ -61,3 +70,4 @@ upgCursor.addEventListener(`click`, function (e) {
     setTimeout(toggleFail,3000,upgCursor);
   }
 })
+}
