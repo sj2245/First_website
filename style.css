@@ -23,6 +23,13 @@
   justify-content: center;
   grid-template-columns: 1fr;
 }
+.centeredElement{
+  display: grid;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr; 
+}
 a{
   text-decoration: none;
   color:black
@@ -42,7 +49,7 @@ a:hover{
   font-weight: 900;
   transition: 300ms ease-in-out;
 }
-.basicDisplay{
+.basicDisplay {
   width: 85%;
   margin: 5%;
   padding: 15px;
@@ -53,6 +60,21 @@ a:hover{
   font-weight: 900;
   transition: 300ms ease-in-out;
 }
+@media (max-width:1000px){
+  .basicButton {
+    margin:0px;
+    width: 100%;
+    border-radius: 0px;
+
+  }
+  .basicDisplay {
+    margin: 0px;
+    width: 100%;
+    border-radius: 0px;
+    
+  }
+}
+
 .basicButtonFail{
   color:red;
   border: 5px solid rgb(255, 0, 0);
@@ -70,10 +92,19 @@ a:hover{
   transition: 300ms ease-in-out;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 25px;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   background: #6acdc4;
   color: white;
   font-family: 'Urbanist';
+  justify-content: center;
 }
