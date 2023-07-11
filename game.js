@@ -22,10 +22,17 @@ if (upgIdle) {
     else if (count >= idleUpgCost){
       count = count - idleUpgCost;
       idleGen *= 2;
-      idleUpgCost = idleUpgCost * 2;
+      idleUpgCost < 20 ? idleUpgCost *= 2 : idleUpgCost *= 2.5
+      // if(idleUpgCost < 20){
+      //   idleUpgCost = idleUpgCost * 2;
+      // }
+      // else{
+      //   idleUpgCost = idleUpgCost * 2.5;
+      // }
       pntNumbero.innerHTML = count;
       upgIdle.innerHTML = `Upgrade idle point gain! Cost: ${idleUpgCost}`;
     }
+    
     else{
      
       console.log({       
