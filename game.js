@@ -1,13 +1,41 @@
-function getdoc(selector) {
-  return document.querySelector(selector);
-}
 console.log(`idle production script ready`);
-
-let pntNumbero = getdoc(`.points`);
 //purposely no space
 // rakib doo doo
-if (pntNumbero2) {
+if (pntNumbero) {
   let pointGen = setInterval(function () {
-    pntNumbero2.innerHTML = parseInt(pntNumbero2.innerHTML) + 1;
+  
+
+    count = count + idleGen;
+    pntNumbero.innerHTML = count;
   }, 1000) 
+}
+if (upgIdle) {
+  upgIdle.addEventListener(`click`, function (e) {
+    
+    if(idleGen == 0 && count >= idleUpgCost){
+      count = count - idleUpgCost;
+      idleGen += 1;
+      idleUpgCost = 5;
+      pntNumbero.innerHTML = count;
+      upgIdle.innerHTML = `Upgrade idle point gain! Cost: ${idleUpgCost}`;
+    }
+    else if (count >= idleUpgCost){
+      count = count - idleUpgCost;
+      idleGen *= 2;
+      idleUpgCost = idleUpgCost * 2;
+      pntNumbero.innerHTML = count;
+      upgIdle.innerHTML = `Upgrade idle point gain! Cost: ${idleUpgCost}`;
+    }
+    else{
+     
+      console.log({       
+        failure:`No A+`,
+        count,
+        
+      })
+      toggleFail(upgIdle);
+
+      setTimeout(3000, toggleFail(upgIdle));
+    }
+  })
 }
