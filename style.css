@@ -32,11 +32,23 @@
 }
 a{
   text-decoration: none;
-  color:black
+  color:black;
+  transition: 300ms ease-in-out;
+  font-size: 15px;
 }
+#GameHeaderRight{
+
+  display: flex;
+  grid-gap: 15px;
+}
+#GameHeaderRight button:last-child {
+  filter: invert(1);
+}
+
 a:hover{
   text-decoration: underline;
   color: blue;
+  font-size: 17px;
 }
 .basicButton {
   width: 85%;
@@ -66,6 +78,11 @@ a:hover{
     width: 100%;
     border-radius: 0px;
 
+  }
+  #GameHeaderRight {
+    /* display: block; */
+    flex-direction: column;
+    grid-gap: 5px;
   }
   .basicDisplay {
     margin: 0px;
@@ -102,10 +119,14 @@ main {
 #GameHeader{
   display: flex;
   justify-content: space-between;
-  
+  align-items: center;
+  width: 95%;
+  margin: 10px auto;
 }
-#GameHeaderLeft{
+#GameHeaderLeft {
   display: flex;
+  grid-gap: 10px;
+  align-items: center;
 }
 #gamefooter{
   display: flex;
@@ -117,8 +138,8 @@ main {
   padding: 2px;
 }
 #topLogo{
-  width: 35px;
-  height: 35px;
+  width: 70px;
+  height: 70px;
 }
 body {
   display: flex;
@@ -128,7 +149,7 @@ body {
   background: #6acdc4;
   color: white;
   font-family: 'Urbanist';
-  justify-content: center;
+  justify-content: space-between;
   
   
 }
