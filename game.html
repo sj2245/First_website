@@ -12,18 +12,20 @@
 </head>
 
 <body>
-  <header>
-    <div>Generic clicker game</div>
+  <header id="GameHeader">
+    <div id="GameHeaderLeft"><img id="topLogo" src="cursor.png" alt="Logo"> <h2 id="topText">Generic clicker game</h2></div><div>Object2</div>
   </header>
   <main>
     <button id="pointDisplay" class="basicDisplay centeredElement">Current Points: <div class="points">0</div></button>
     <button id="pointClickDisplay"class="basicDisplay centeredElement">Points gained per click:1</button>
-    <button id="theOGButton" class="circleButton centeredElement">Click me for points!</button>
+    <div id="midSection">
+      <button id="theOGButton" class="circleButton centeredElement">Click me for points!</button>
+    </div>
     <button id="UpgCursor" class="basicButton centeredElement">Upgrade cursor! Cost:10 Points</button>
     <button id="UpgIdle" class="basicButton centeredElement">Unlock idle point gain! Cost:<div class="idleGain">10</div> Points</button>
   </main>
-  <footer>
-    Bye!
+  <footer id="gamefooter">
+    <button class="basicButton"id="returnButt"><a href="index.html" id="BeginGame">Return to Home page!</button>
   </footer>
 </body>
 

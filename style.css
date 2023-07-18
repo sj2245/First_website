@@ -40,7 +40,7 @@ a:hover{
 }
 .basicButton {
   width: 85%;
-  margin: 5%;
+  
   padding: 15px;
   border-radius: 1000px;
   font-family: 'Urbanist';
@@ -51,7 +51,7 @@ a:hover{
 }
 .basicDisplay {
   width: 85%;
-  margin: 5%;
+ 
   padding: 15px;
   border-radius: 1000px;
   font-family: 'Urbanist';
@@ -82,7 +82,6 @@ a:hover{
 .circleButton {
   width: 250px;
   height: 250px;
-
   padding: 15px;
   border-radius: 1000px;
   font-family: 'Urbanist';
@@ -91,13 +90,36 @@ a:hover{
   font-weight: 900;
   transition: 300ms ease-in-out;
 }
+#topText{
+  font-size: 35px;
+}
 
 main {
   display: flex;
   flex-direction: column;
   grid-gap: 25px;
 }
-
+#GameHeader{
+  display: flex;
+  justify-content: space-between;
+  
+}
+#GameHeaderLeft{
+  display: flex;
+}
+#gamefooter{
+  display: flex;
+  justify-content: center;
+}
+#returnButt{
+  margin-top: 30px;
+  font-size: x-small;
+  padding: 2px;
+}
+#topLogo{
+  width: 35px;
+  height: 35px;
+}
 body {
   display: flex;
   flex-direction: column;
@@ -107,4 +129,9 @@ body {
   color: white;
   font-family: 'Urbanist';
   justify-content: center;
+  
+  
+}
+#IndexBod{
+  height: 85%;
 }
